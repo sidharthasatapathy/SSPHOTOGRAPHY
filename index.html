@@ -6,53 +6,69 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ss photography</title>
+    <link href="jquery.bxslider.css" rel="stylesheet" type="text/css">
+       
+ 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   <script src="angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="angular.min.js"></script>
     <script>
-    app=angular.module("myapp",[])
-        app.controller("myctrl",function($scope){
-            $scope.t1=function(){
-                alert ("Thank you for contacting us , we will get touch with you soon")
+        app = angular.module("myapp", [])
+        app.controller("myctrl", function($scope) {
+            $scope.t1 = function() {
+                alert("Thank you for contacting us , we will get touch with you soon")
             }
         })
-    
-    
+
     </script>
 </head>
 
-<body  ng-app="myapp" ng-controller="myctrl">
+<body ng-app="myapp" ng-controller="myctrl">
     <header>
         <div class="navfix">
-        <nav class="navbar">
-            <a href="logo.png" id="logo"></a>
-            <ul>
-                <li><a href="#"> HOME</a></li>
-                <li><a href="#aboutsec">ABOUT ME </a></li>
-                <li><a href="#gallery">GALLERY</a></li>
-                <li><a href="portfolio.html">PORTFOLIO</a></li>
-                <li><a href="#enquiry">BOOK A DATE</a></li>
-            
-              <li><a href="CONTACT%20US.jpg" class="img-fluid">CONTACT US</a></li>
+            <nav class="navbar">
+                <a href="logo.png" id="logo"></a>
+                <ul>
+                    <li><a href="#"> HOME</a></li>
+                    <li><a href="#aboutsec">ABOUT ME </a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="#enquiry">BOOK A DATE</a></li>
+
+                    <li><a href="CONTACT%20US.jpg" class="img-fluid">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+           
+
+        <div id="slider">
+            <ul class="bxslider">
+                <li><img src="can.jpg"></li>
+                <li><img src="canon.jpg"></li>
+                <li><img src="red.jpg"></li>
             </ul>
-        </nav>
-            </div>
+        </div>
+        
+        
+        
+        
     </header>
-                                           <!--ABOUT US SECTION-->
+    <!--ABOUT US SECTION-->
     <div id="aboutsec">
-        <img class="img-fluid" src="about%20me.jpg"  >
+        <img class="img-fluid" src="about%20me.jpg">
     </div><br>
-    
+
     <h2 style="text-align: center" id="gallery">Gallery</h2>
-    
-    
-    
-    
-                                        <!--SLIDER SECTION GALLERY-->
-  <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+
+
+
+
+    <!--SLIDER SECTION GALLERY-->
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
             <img class="d-block w-100" src="img/im1.jpg" alt="my images">
@@ -89,74 +105,74 @@
     
     
     
-    </div>-->  
-    
-    
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"  data-interval="1000" >
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-  </ol>
-  <div class="carousel-inner container" style="height: 70%; width: 70%;">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="im1.jpg" alt="First slide" >
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src= "im10.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src= "im11.jpg" alt="Third slide">
-    </div>
-       
-   <!-- <div class="carousel-item active">
+    </div>-->
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="1000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        </ol>
+        <div class="carousel-inner container" style="height: 70%; width: 70%;">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="im1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="im10.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="im11.jpg" alt="Third slide">
+            </div>
+
+            <!-- <div class="carousel-item active">
       <img class="d-block w-100" src="img/im5.jpg" alt="First slide" >
     </div>-->
-    <div class="carousel-item">
-      <img class="d-block w-100" src= "im12.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src= "im13.jpg"r alt="Third slide">
-    </div>
-     
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <div class="carousel-item">
+                <img class="d-block w-100" src="im12.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="im13.jpg" r alt="Third slide">
+            </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
-</div>
-    
-    <h5 style="text-align: center">For more images      <a href="gall.html"><i>Click here</i></a></h5>
+    </div>
+
+    <h5 style="text-align: center">For more images <a href="gall.html"><i>Click here</i></a></h5>
     <hr>
-    
-    
-                                                          <!--ENQUIRY -->
-    <form action="t1()">
-    <div class="container" id="enquiry">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 style="text-align: center">BOOK UR DATE </h1>
-                <form>
-                    <div class="form-group">
-                        <label for="firstname">First Name</label>
-                        <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="Lastname">Last Name</label>
-                        <input type="text" class="form-control" name="Lastname" placeholder="Last Name" required>
-                    </div>
-                       <div class="form-group">
-                           <label for="number">Phone no</label>
-                           <input type="number" class="form-control" name="phone no" placeholder="Enter your phone number here" required>
-                       </div>
+
+
+    <!--ENQUIRY -->
+    <form action="form_sub.php" method="post" name="form">
+        <div class="container" id="enquiry">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 style="text-align: center">BOOK UR DATE </h1>
+                    <form>
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="Lastname">Last Name</label>
+                            <input type="text" class="form-control" name="Lastname" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Phone no</label>
+                            <input type="number" class="form-control" name="phone_no" placeholder="Enter your phone number here" required>
+                        </div>
                         <div class="form-group">
                             <label for="Email">Email id</label>
                             <input type="email" class="form-control" required name="email" placeholder="Enter your Email here">
@@ -165,12 +181,12 @@
                             <label for="address">Shoot Location</label>
                             <input type="text" class="form-control" required name="address" placeholder="Enter Address here">
                         </div>
-                    <div class="form-group">
-                    <label for="date">Shoot Date</label>
-                        <input type="date" class="form-control" required>
-                    </div>
-                        
-                         <!--<div class="radio">
+                        <div class="form-group">
+                            <label for="date">Shoot Date</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+
+                        <!--<div class="radio">
                            Gender:
                             <label>
                             <input type="radio" name="gender" value="male">Male   
@@ -183,8 +199,8 @@
                              <input type="radio" name="gender" value="other">Other   
 
                             </label>
-                        </div>-->       
-                        
+                        </div>-->
+
                         <div class="checkbox">
                             My enquiry is for:
                             <label>
@@ -194,25 +210,95 @@
                                 <input type="checkbox" name="Webdevloping" value="Webdevloping" >Web Devloping
                             </label>
                         </div>
-                       <input type="submit" value="submit" class="btn-primary btn-block" ng-click="t1()">
-                   
-                </form>
+                        <input type="submit" value="submit" name="submit" SSclass="btn-primary btn-block" ng-click="t1()">
+
+                    </form>
+                </div>
+
+
             </div>
-            
-           
         </div>
-    </div>
-        </form>
-                                                           <!--CONTACT US-->
-    
-    
-         
-                                                                <!-- FOOTER-->
-    
+    </form>
+    <!--CONTACT US-->
+
+
+
+    <!-- FOOTER-->
+
     <footer class="footer">
-    <p>Sidhartha_satapathy&copy; Reserved </p>
+        <div class="container foot">
+            <br>
+            <br>
+            <p ><span style="color: aliceblue; font-size: 35px;">Text me, Email me, Like me </span><span style="color: #898585; font-size: 29px;"> or simply </span><span style="color: aliceblue; font-size: 35px;"> Call Me :- </span><br> <span style="color: #898585; font-size: 30px;"> I love discussing new Projects,</span> <span style="color:#841900; font-size: 35px; ">No matter what your budget.</span></p>
+
+            <div class=" row">
+
+
+
+                <div class="col-md-4">
+                    <h4>Telephone</h4>
+                    <h6>+91 90401 82176</h6>
+                    <br>
+                    <br>
+                    <h4>Email</h4>
+                    <h6>sidharthasatapathy0@gmail.com</h6>
+                    <br>
+                    <br>
+                    <h4>Address</h4> <br> <iframe style="height: 200px; width: 360px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.424408672452!2d78.44626231443969!3d17.43938928804744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb90c643fd30eb%3A0x34b275f3bac8d9ca!2sCentre+for+Development+of+Advanced+Computing!5e0!3m2!1sen!2sin!4v1523768669810" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+
+
+
+
+
+                <div class="col-md-8">
+                    <h4>Get in touch</h4>
+                    <form action="footervalid.php" method="post" name="form">
+                        
+                            <label class="">Name</label>
+                            <input type="text" name="name" placeholder="Enter your name here" class="form-control">
+                            <label class="">Email id</label>
+                            <input type="email" name="email" placeholder="Enter your email here" class="form-control">
+                            <label class="screen-reader-text">Phone no</label>
+                            <input type="tel" name="number" placeholder="Your Contact number" class="form-control">
+
+                       
+
+
+
+
+                     
+                            <label class="">Text area</label>
+                            <textarea name="msg" rows="7" cols="3" class="form-control"></textarea>
+                            <input type="submit" name="submit" value="submit" id="submit" style="width: 100%; color: white; background-color: dodgerblue">
+                       
+
+
+
+                    </form>
+
+
+
+
+                </div>
+
+                
+
+            </div>
+                </div>
+        
+        <div class="lowfoot"><p>Sidhartha_satapathy&copy; Reserved </p></div>
     </footer>
 
+    
+    
+     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <script src="jquery.bxslider.min.js"></script>
+    <script src="myyslide.js"></script>
+    
+    
+    
 </body>
 
 </html>
