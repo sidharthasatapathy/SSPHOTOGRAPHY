@@ -1,16 +1,16 @@
 <?php 
     if(isset($_POST['submit'])){
-        $Name=$_POST['name'];
-        $Email=$_POST['email'];
+        $name=$_POST['name'];
+        $email=$_POST['email'];
         $number=$_POST['number'];
         
-        $message=$_POST['msg'];
+        $msg=$_POST['msg'];
         
-        $to='ssatapathy000@gmail.com';
-        $subject='Form Submission';
+        $to='sspro.creation@gmail.com';
+        $subject='Contact me, I am  '.$name.' ';
         $message="name: ".$name."\n".
                  "email: ".$email."\n".
-                 "tel: ".$number."\n".
+                 "number: ".$number."\n".
             "Wrote the following: "."\n\n".$msg;
         $headers="Form: ".$email;
         

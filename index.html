@@ -7,27 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ss photography</title>
     <link href="jquery.bxslider.css" rel="stylesheet" type="text/css">
-       
- 
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="angular.min.js"></script>
-    <script>
-        app = angular.module("myapp", [])
-        app.controller("myctrl", function($scope) {
-            $scope.t1 = function() {
-                alert("Thank you for contacting us , we will get touch with you soon")
-            }
-        })
+    <link rel="stylesheet" href="index.css">
 
-    </script>
 </head>
 
 <body ng-app="myapp" ng-controller="myctrl">
     <header>
+        
+        <nav class="mobile-nav">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#aboutsec">ABOUT</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#enquiry">Inquiry</a></li>
+            <li><a href="#footer">CONTACT</a></li>
+            </ul>
+        </nav>
+        
         <div class="navfix">
             <nav class="navbar">
                 <a href="logo.png" id="logo"></a>
@@ -38,12 +35,12 @@
                     <li><a href="portfolio.html">PORTFOLIO</a></li>
                     <li><a href="#enquiry">BOOK A DATE</a></li>
 
-                    <li><a href="CONTACT%20US.jpg" class="img-fluid">CONTACT US</a></li>
+                    <li><a href="#footer" class="img-fluid">CONTACT US</a></li>
                 </ul>
             </nav>
         </div>
-        
-           
+
+
 
         <div id="slider">
             <ul class="bxslider">
@@ -52,10 +49,10 @@
                 <li><img src="red.jpg"></li>
             </ul>
         </div>
-        
-        
-        
-        
+
+
+
+
     </header>
     <!--ABOUT US SECTION-->
     <div id="aboutsec">
@@ -162,16 +159,16 @@
                     <h1 style="text-align: center">BOOK UR DATE </h1>
                     <form>
                         <div class="form-group">
-                            <label for="firstname">First Name</label>
-                            <input type="text" class="form-control" name="firstname" placeholder="First Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
                         </div>
-                        <div class="form-group">
+                        <!--<div class="form-group">
                             <label for="Lastname">Last Name</label>
                             <input type="text" class="form-control" name="Lastname" placeholder="Last Name" required>
-                        </div>
+                        </div>-->
                         <div class="form-group">
                             <label for="number">Phone no</label>
-                            <input type="number" class="form-control" name="phone_no" placeholder="Enter your phone number here" required>
+                            <input type="number" class="form-control" name="phone" placeholder="Enter your phone number here" required>
                         </div>
                         <div class="form-group">
                             <label for="Email">Email id</label>
@@ -183,8 +180,9 @@
                         </div>
                         <div class="form-group">
                             <label for="date">Shoot Date</label>
-                            <input type="date" class="form-control" required>
+                            <input type="date" name="date" class="form-control" required>
                         </div>
+
 
                         <!--<div class="radio">
                            Gender:
@@ -201,7 +199,7 @@
                             </label>
                         </div>-->
 
-                        <div class="checkbox">
+                        <div class="checkbox form-group">
                             My enquiry is for:
                             <label>
                                 <input type="checkbox" name="photography" value="Photography" checked>Photography
@@ -209,6 +207,14 @@
                             <label>
                                 <input type="checkbox" name="Webdevloping" value="Webdevloping" >Web Devloping
                             </label>
+                            <select class=" " name="select" style="margin-left: 55px">
+                        <option>Select Type</option>
+                        <option>Portfolio</option>
+                        <option>Wedding</option>
+                        <option>Pre/Post Wedding</option>
+                        <option>Party/Event</option>
+                        
+                        </select>
                         </div>
                         <input type="submit" value="submit" name="submit" SSclass="btn-primary btn-block" ng-click="t1()">
 
@@ -225,11 +231,11 @@
 
     <!-- FOOTER-->
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container foot">
             <br>
             <br>
-            <p ><span style="color: aliceblue; font-size: 35px;">Text me, Email me, Like me </span><span style="color: #898585; font-size: 29px;"> or simply </span><span style="color: aliceblue; font-size: 35px;"> Call Me :- </span><br> <span style="color: #898585; font-size: 30px;"> I love discussing new Projects,</span> <span style="color:#841900; font-size: 35px; ">No matter what your budget.</span></p>
+            <p><span style="color: aliceblue; font-size: 35px;">Text me, Email me, Like me </span><span style="color: #898585; font-size: 29px;"> or simply </span><span style="color: aliceblue; font-size: 35px;"> Call Me :- </span><br> <span style="color: #898585; font-size: 30px;"> I love discussing new Projects,</span> <span style="color:#841900; font-size: 35px; ">No matter what your budget.</span></p>
 
             <div class=" row">
 
@@ -255,24 +261,24 @@
                 <div class="col-md-8">
                     <h4>Get in touch</h4>
                     <form action="footervalid.php" method="post" name="form">
-                        
-                            <label class="">Name</label>
-                            <input type="text" name="name" placeholder="Enter your name here" class="form-control">
-                            <label class="">Email id</label>
-                            <input type="email" name="email" placeholder="Enter your email here" class="form-control">
-                            <label class="screen-reader-text">Phone no</label>
-                            <input type="tel" name="number" placeholder="Your Contact number" class="form-control">
 
-                       
+                        <label class="">Name</label>
+                        <input type="text" name="name" placeholder="Enter your name here" class="form-control">
+                        <label class="">Email id</label>
+                        <input type="email" name="email" placeholder="Enter your email here" class="form-control">
+                        <label class="screen-reader-text">Phone no</label>
+                        <input type="tel" name="number" placeholder="Your Contact number" class="form-control">
 
 
 
 
-                     
-                            <label class="">Text area</label>
-                            <textarea name="msg" rows="7" cols="3" class="form-control"></textarea>
-                            <input type="submit" name="submit" value="submit" id="submit" style="width: 100%; color: white; background-color: dodgerblue">
-                       
+
+
+
+                        <label class="">Text area</label>
+                        <textarea name="msg" rows="7" cols="3" class="form-control"></textarea>
+                        <input type="submit" name="submit" value="submit" id="submit" style="width: 100%; color: white; background-color: dodgerblue">
+
 
 
 
@@ -283,22 +289,36 @@
 
                 </div>
 
-                
+
 
             </div>
-                </div>
-        
-        <div class="lowfoot"><p>Sidhartha_satapathy&copy; Reserved </p></div>
-    </footer>
+        </div>
 
-    
-    
-     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+        <div class="lowfoot">
+            <p>Sidhartha_satapathy&copy; Reserved </p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script>
+        app = angular.module("myapp", [])
+        app.controller("myctrl", function($scope) {
+            $scope.t1 = function() {
+                alert("Thank you for contacting us , we will get touch with you soon")
+            }
+        })
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <script src="jquery.bxslider.min.js"></script>
     <script src="myyslide.js"></script>
-    
-    
-    
+
+
+
 </body>
 
 </html>
